@@ -1,0 +1,68 @@
+﻿<div id="body" class="jumbotron"  style="align-content:center">
+    <h1 style="color:cornflowerblue">Weather</h1>
+    <p class="lead">This app helps to understand the completer weather info for your city</p>
+    <p><a href="http://www.webservicex.net/globalweather.asmx?WSDL" target="_blank" class="btn btn-primary btn-lg">Service Details</a></p>
+    </div>
+<div class="row" ng-controller="weatherController">
+    <div class="col-md-6 ">
+        <div class="col-md-3 text-right">
+            <h3 style="color:cornflowerblue">Enter Country</h3>
+            <p> 
+                <input type="text" ng-model="Country" placeholder="Enter Country" /> Mock City Data exist for Australia(Gladstone),United Kingdom(Derby),Fiji(Nandi), Singapore(Singapore / Changi Airport), India(Ahmadabad)
+            </p>
+            <p>
+                <button class="btn btn-primary btn-lg text-left" type="button" ng-click="APIHit()" value="Submit">Submit</button>
+            </p>
+        </div>
+        <div class="col-md-3 text-left" ng-show="showCity">
+            <h3 style="color:cornflowerblue">List of City</h3>
+            <p>
+                <div style="color:cornflowerblue">
+                    <select name="singleSelect" ng-model="selectcity" ng-change="hitAPIForCities()"
+                            ng-options="x.CityName for x in cityList" value="{{x.CityName}}">
+                        <option value="">---Select City---</option>
+                    </select><br>
+                    <div ng-show="showSelected"><h3>You selected: {{selectcity.CityName}}</h3></div>
+
+                </div>
+            </p>
+        </div>
+    </div>
+    <div ng-show="showError">
+        <h3 style="color:red">No Data Found</h3> 
+    </div>
+    <div class="col-md-6 text-center" style="color:cornflowerblue" ng-show="showCityInfo">
+        <h3 style="color:cornflowerblue">City Weather Info</h3>
+        <p >
+            <div ng-repeat="info in ReturnValue">
+                <ul>
+                    <li>Country: {{info.Country}}</li>
+                    <li> Location: {{info.Location}}</li>
+                    <li>Time: {{info.Time}}</li>
+
+                    <li>Wind: {{info.Wind}}</li>
+
+                    <li>Visibility:{{info.Visibility}}</li>
+
+                    <li>SkyCondition:{{info.SkyCondition}}</li>
+
+                    <li>Temperature: {{info.Temperature}}</li>
+
+                    <li>DewPoint: {{info.DewPoint}}</li>
+                    <li>DewPoint: {{info.RelativeHumidity}}</li>
+                    <li>Pressure: {{info.Pressure}}</li>
+
+
+                </ul>
+
+            </div>
+        </p>
+
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>*@
+    </div>
+</div>
+
+    
+    
+
+

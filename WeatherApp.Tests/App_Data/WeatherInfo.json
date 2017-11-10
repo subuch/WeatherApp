@@ -1,0 +1,38 @@
+﻿[
+      {
+        "Country": "United Kingdom",
+        "Location": "London",
+        "Time": "10AM",
+        "Wind": "North",
+        "Visibility": "1500M",
+        "SkyCondition": "Clear",
+        "Temperature": "20C",
+        "DewPoint": "0",
+        "RelativeHumidity": "20",
+        "Pressure": "15"
+      },
+    {
+        "Country": "United Kingdom",
+        "Location": "Doncaster",
+        "Time": "10AM",
+        "Wind": "West",
+        "Visibility": "15000M",
+        "SkyCondition": "Haze",
+        "Temperature": "30C",
+        "DewPoint": "0",
+        "RelativeHumidity": "20",
+        "Pressure": "15"
+    },
+    {
+         "Country": "Australia",
+        "Location": "Sydney",
+        "Time": "10PM",
+        "Wind": "South",
+        "Visibility": "12000M",
+        "SkyCondition": "Sunny",
+        "Temperature": "25C",
+        "DewPoint": "0",
+        "RelativeHumidity": "20",
+        "Pressure": "15"
+      }
+    ]
